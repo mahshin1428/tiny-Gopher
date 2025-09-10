@@ -1,0 +1,42 @@
+#package roles
+1. akta folder e aktar beshi package thakte parbe nah.
+2. package er nam mela kichui hoite pare but easiest way hoilo folder er nam rei package er nam hishabe diya dea.
+3.funtion must be exported(fiest letter is capital) to call it from another package
+4. unexported function( first letter is small) from another package
+
+
+## basic rules
+1. All file in go must have/need a package.
+2. the package of main go file will be main
+3. fmt => format 
+4. format consist many library fuctions so we must import it 
+
+
+##variable 
+1. variable declaration style like this a:= 10 (local variable)
+2. global varibale diclaration method is like a=10
+3. function er vitor e (local variable) amra veriable type use korteo pari nao pari, i mean ' := ' ere use korle data type dileo hobe na dileo hobe
+  but globally jehetu amra ' := ' ere use korte parmu na so must be amder k data type boila dite hobe.
+4. variable declaration aktu awkword compare to other
+-->var age int = 25
+--> var pi float64 = 3.1415
+--> var greeting string = "Hello"
+--> var isGoFun bool = true
+--> 
+-->  
+
+5. struct akta important data types:
+    declaration process of struct 
+    type Person struct {
+    Name string
+    Age  int
+}
+
+## conditional is like C
+
+## function gulay nam age variable type pore.
+    others jinish pati C er motoi
+    return type boila dite hoy like this " func add(n1 int, n2 int) int {}
+
+##scope
+ means accessing any variable from any part of the code( access korte parle scope ache otherwise nai) 
