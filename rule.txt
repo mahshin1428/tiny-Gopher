@@ -1,8 +1,13 @@
 #package roles
 1. akta folder e aktar beshi package thakte parbe nah.
 2. package er nam mela kichui hoite pare but easiest way hoilo folder er nam rei package er nam hishabe diya dea.
-3.funtion must be exported(fiest letter is capital) to call it from another package
+3. funtion must be exported(fiest letter is capital) to call it from another package
 4. unexported function( first letter is small) from another package
+
+
+##for run a code, commands are.
+1. go run "name(x,y,z)"
+2. go run .
 
 
 ## basic rules
@@ -40,3 +45,15 @@
 
 ##scope
  means accessing any variable from any part of the code( access korte parle scope ache otherwise nai) 
+
+
+ ##function
+ 1. I already discuss in the package roles sections
+ 2. Types of function in go--->
+  a. init function(no input/output needed, computer call it by own) 
+     execution order: global--> init() -> main() -> other functions
+  b. standard or named named function(have a name)
+  c. anonymous function( js e declare kore rekhe dea jay)
+     but go te declare kore rekhe dea jay na.
+     immediatly invoke function expression(IIFE) kore eitare
+  d.
