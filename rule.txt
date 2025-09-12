@@ -92,3 +92,16 @@
  2. Even after the outer function has finished executing, the inner function (closure) can still access and modify those variables.
  3. amne function e akbar execution sesh e variable mara jay but anonymous function(or return function) inside another function define korle go oitare
     totokkhon bachay rakhe jotokkhon closure in use theke(main thake call dey)
+ 4.Escape to heap 
+   Normally, when outer() finishes, its stack frame disappears, and money would be destroyed. 
+   But since show captures money, Go’s compiler/runtime performs escape analysis and moves money to the heap, so it outlives outer().
+   Closure object created
+   the closure (show) is represented internally as a pair:
+   A function pointer → the compiled code of show
+   An environment pointer → a hidden struct on the heap holding money   
+   like this code:
+   
+   f = {
+    fn_ptr: &show_code,
+    env_ptr: &{ money = 100 }
+   }
