@@ -47,7 +47,7 @@
  means accessing any variable from any part of the code( access korte parle scope ache otherwise nai) 
 
 
- ##function
+##function
  1. I already discuss in the package roles sections
  2. Types of function in go--->
   a. init function(no input/output needed, computer call it by own) 
@@ -59,23 +59,36 @@
   
 
 ##Function expression
-1. variable er moddhe akta value assign korle oita hocche variable expression
-2. jodi akta veriable er moddhe pura akta function assign kora hoy tahole oita function expression
+ 1. variable er moddhe akta value assign korle oita hocche variable expression
+ 2. jodi akta veriable er moddhe pura akta function assign kora hoy tahole oita function expression
   example:
   /* add:= func(a int, b int){
     c:= a+b
     fmt.Println(c)
   }
 
- ##Others function type:
-  1.First order function(
+
+##Others function type:
+ 1.First order function(
     -->A first-order function is a normal function that does not take other functions as arguments and does not return a function.
     -->It just takes simple inputs (numbers, strings, etc.) and returns simple outputs.
     )
-  2.Higher order function(
+ 2.Higher order function(
     -->Also called first class function[variable er moddhe j kono dhoroner value assign kora jay oitare bole first class citizen,
         amra go te variable er moddhe function assign korte pari tai j function e pass kora hoy oitare boli first class functions]
     -->A higher-order function is a function that can take another function[ere bole call back function] as an argument or return a function
     -->This makes code more flexible and allows things like callbacks, functional patterns, etc
   )
 
+
+##internal memeory["code segmet", "data segment", "stack", "heap"]
+ 1. variable(global) gula thake data segment e
+ 2. method/function gula thake code segment e
+ 3. all method calls[execution] in stack and the speace one method takes for running it's call stack frame[different for each fuction]
+
+
+##Closure
+ 1. a closure is a function value that captures variables from its surrounding scope
+ 2. Even after the outer function has finished executing, the inner function (closure) can still access and modify those variables.
+ 3. amne function e akbar execution sesh e variable mara jay but anonymous function(or return function) inside another function define korle go oitare
+    totokkhon bachay rakhe jotokkhon closure in use theke(main thake call dey)
