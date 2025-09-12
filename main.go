@@ -49,10 +49,11 @@ func outer() func(){
 	fmt.Println("age is", age)
 
 	show:= func(){
-		money = money + a + p
+		money = money + a + p         // as money(a r p global tai eder niye tension nai) variable ta lagtese(as outter function dies) tai escape analysis kore heap er moddhe rakhe dibe
 		fmt.Println("money is:", money)
 	}
 	return show // doubt silo function ki return korbe? (ans: Go-তে function নিজেও একটা value)
+	            //show er value reo heap e store kore rakhe
 }
 
 func call(){
