@@ -85,6 +85,12 @@ type User struct {
 	Age  int
 }
 
+//Receiver function
+func printUserDetails(u User) {
+	fmt.Println("Name is:", u.Name)
+	fmt.Println("Age is:", u.Age)
+}
+
 func main() {
 	//way-1
 	// like var p int
@@ -95,14 +101,16 @@ func main() {
 		Name: "Mahshin",
 		Age:  22,
 	}
-	fmt.Println("Name is:", user.Name)
-	fmt.Println("Age is:", user.Age)
+	//fmt.Println("Name is:", user.Name)
+	//fmt.Println("Age is:", user.Age)
 
 	//way-2
 	user2 := User{
 		Name: "Arafat",
 		Age:  23,
 	}
-	fmt.Println("Name is:", user2.Name)
-	fmt.Println("Age is:", user2.Age)
+	//fmt.Println("Name is:", user2.Name)
+	//fmt.Println("Age is:", user2.Age)
+	printUserDetails(user)
+	printUserDetails(user2)
 }
