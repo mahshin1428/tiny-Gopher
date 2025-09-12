@@ -76,7 +76,7 @@ func main() {
 	call()
 }
 
-*/
+
 
 //struct
 
@@ -84,6 +84,7 @@ type User struct {
 	Name string
 	Age  int
 }
+
 
 //Receiver function
 func printUserDetails(u User) {
@@ -113,4 +114,19 @@ func main() {
 	//fmt.Println("Age is:", user2.Age)
 	printUserDetails(user)
 	printUserDetails(user2)
+}
+
+*/
+
+// Array in go
+func main() {
+	//1.Fixed-size array
+	var arr [2]int = [2]int{1, 2}
+	//2.Fixed-size array with inferred length
+	//b := [...]int{4, 5, 6, 7}
+	//3. Partial initialization
+	//4.Indexed initialization
+	//5.Array of strings (or any type)
+
+	fmt.Println("Array is:", arr) //by default 0
 }
