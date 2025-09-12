@@ -33,7 +33,6 @@ func main(){
 }
 */
 
-
 /*
 //closure function
 
@@ -65,7 +64,7 @@ func call() {
 	                             }
 								 eikhane akta variable er jonno different differnt stuct create korte
 								 and protteke nijer stack joto bar call hoi shei onujayi update kortese
-	
+
 
 	innerfunc2 := outer()
 	innerfunc2() //130
@@ -79,7 +78,6 @@ func main() {
 
 */
 
-
 //struct
 
 type User struct {
@@ -87,12 +85,24 @@ type User struct {
 	Age  int
 }
 
-func main(){
+func main() {
+	//way-1
+	// like var p int
 	var user User
 
-	user = User{
+	//like p = 10
+	user = User{ //instance or object of struct
 		Name: "Mahshin",
 		Age:  22,
 	}
 	fmt.Println("Name is:", user.Name)
+	fmt.Println("Age is:", user.Age)
+
+	//way-2
+	user2 := User{
+		Name: "Arafat",
+		Age:  23,
+	}
+	fmt.Println("Name is:", user2.Name)
+	fmt.Println("Age is:", user2.Age)
 }
