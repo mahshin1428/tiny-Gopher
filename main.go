@@ -128,5 +128,11 @@ func main() {
 	//4.Indexed initialization
 	//5.Array of strings (or any type)
 
+	x := 20 
+	p := &x
+	fmt.Println("Value of x:", *p) //20
+	*p = 30
+	fmt.Println("Value of x:", *p) //30
+
 	fmt.Println("Array is:", arr) //by default 0
 }
