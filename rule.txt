@@ -105,3 +105,24 @@
     fn_ptr: &show_code,
     env_ptr: &{ money = 100 }
    }
+
+##slice
+ Internally, a slice has three parts:
+  2.Pointer → points to the underlying array
+  3.Length → number of elements currently in the slice
+  4.Capacity → maximum size it can grow before needing a new array
+ There are some ways to delaring slice like-
+  1.Literal(etate mainly array er motoi declare korbo but kahini hoilo array te jemon size mention kore dei oita eikhane korbo nah)
+    ex: numbers := []int{1, 2, 3, 4, 5}
+  2.From an array
+    ex: arr := [5]int{10, 20, 30, 40, 50}
+    slice := arr[1:4]    // elements at index 1,2,3
+  3.Using make
+    ex: s := make([]int, 3, 5) // length 3, capacity 5
+  4.Slice from slice
+    1.jokhon slice1 thake slice2 banabo tokhon slice1 e dakhbo koto number index theke suru hoise r koto te sesh(eta length), r jeita 
+      first(slice2 te) oi value(arrray te) thake array er last element porjonto hoile capacity
+    ex:
+    arr := []int{10, 20, 30, 40, 50}
+    s1 := arr[1:4]   // [20 30 40], len=3 cap=4
+    s2 := s1[1:3]    // slice from slice → [30 40], len=2 cap=3
