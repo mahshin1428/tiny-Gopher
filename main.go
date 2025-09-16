@@ -116,7 +116,7 @@ func main() {
 	printUserDetails(user2)
 }
 
-*/
+
 
 // Array in go
 func main() {
@@ -135,4 +135,21 @@ func main() {
 	fmt.Println("Value of x:", *p) //30
 
 	fmt.Println("Array is:", arr) //by default 0
+}
+
+*/
+
+func main(){
+	arr := [7] int{1,2,3,4,5,6,7}
+	slice := arr[1:5]
+	s := slice[1:3]   // length(number of element) = last index - first index 
+	fmt.Println("Array is:", arr)
+	fmt.Println("slice is",slice)
+	fmt.Println("s is:", s)
+	fmt.Println("slice lenth is:", len(slice))
+	fmt.Println("slice capacity is:", cap(slice))
+	fmt.Println("s length is:", len(s))
+	fmt.Println("s capacity is:",cap(s))
+	
+
 }

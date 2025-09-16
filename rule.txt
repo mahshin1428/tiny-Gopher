@@ -117,12 +117,15 @@
   2.From an array
     ex: arr := [5]int{10, 20, 30, 40, 50}
     slice := arr[1:4]    // elements at index 1,2,3
-  3.Using make
+  3.Using make(4.there is two one is with len and other is with len and cap)
     ex: s := make([]int, 3, 5) // length 3, capacity 5
-  4.Slice from slice
+  5.Slice from slice
     1.jokhon slice1 thake slice2 banabo tokhon slice1 e dakhbo koto number index theke suru hoise r koto te sesh(eta length), r jeita 
       first(slice2 te) oi value(arrray te) thake array er last element porjonto hoile capacity
     ex:
     arr := []int{10, 20, 30, 40, 50}
     s1 := arr[1:4]   // [20 30 40], len=3 cap=4
     s2 := s1[1:3]    // slice from slice → [30 40], len=2 cap=3
+  6. Empty slice or nil slice
+    ex:
+     var s []int
