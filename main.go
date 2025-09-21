@@ -137,7 +137,7 @@ func main() {
 	fmt.Println("Array is:", arr) //by default 0
 }
 
-*/
+
 
 func main(){
 	arr := [7] int{1,2,3,4,5,6,7}
@@ -153,3 +153,30 @@ func main(){
 	
 
 }
+	
+
+
+
+//slice 	
+func main(){
+	var x[] int
+	x = append(x, 1)  //eikhane basically j kaj ta hoitache ta hoile first e append function e jonno akta stack frame create hoitache then ager existing array(from heap memory) tare copy
+	                  // append function e parameter hishebe antese then dakhe capcity koto jodi full hoi tahole notun akta array create kore then ager existing array er 
+					  // element gulo copy kore new array te and new element ta add kore dibe plus pointer ta update korbe
+					  // slice er size surute double(100%) kore barbe but 1024 er por 25% kore barbe
+	x = append(x, 2)
+	x = append(x, 3)
+
+	y:= x
+	
+	x = append(x, 4) //age 4 number index e x 4 boshaisilo, but pore jokhhon y aki index e value(5) boshailo then ager value the overwrite hoise    
+	y = append(y, 5)
+	
+
+	x[0] = 10
+	fmt.Println("x:", x)
+	fmt.Println("y:", y)
+}
+
+*/
+
