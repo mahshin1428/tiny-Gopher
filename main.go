@@ -128,7 +128,7 @@ func main() {
 	//4.Indexed initialization
 	//5.Array of strings (or any type)
 
-	x := 20 
+	x := 20
 	p := &x
 	fmt.Println("Value of x:", *p) //20
 	*p = 30
@@ -142,7 +142,7 @@ func main() {
 func main(){
 	arr := [7] int{1,2,3,4,5,6,7}
 	slice := arr[1:5]
-	s := slice[1:3]   // length(number of element) = last index - first index 
+	s := slice[1:3]   // length(number of element) = last index - first index
 	fmt.Println("Array is:", arr)
 	fmt.Println("slice is",slice)
 	fmt.Println("s is:", s)
@@ -150,28 +150,28 @@ func main(){
 	fmt.Println("slice capacity is:", cap(slice))
 	fmt.Println("s length is:", len(s))
 	fmt.Println("s capacity is:",cap(s))
-	
+
 
 }
-	
 
 
 
-//slice 	
+
+//slice
 func main(){
 	var x[] int
 	x = append(x, 1)  //eikhane basically j kaj ta hoitache ta hoile first e append function e jonno akta stack frame create hoitache then ager existing array(from heap memory) tare copy
-	                  // append function e parameter hishebe antese then dakhe capcity koto jodi full hoi tahole notun akta array create kore then ager existing array er 
+	                  // append function e parameter hishebe antese then dakhe capcity koto jodi full hoi tahole notun akta array create kore then ager existing array er
 					  // element gulo copy kore new array te and new element ta add kore dibe plus pointer ta update korbe
 					  // slice er size surute double(100%) kore barbe but 1024 er por 25% kore barbe
 	x = append(x, 2)
 	x = append(x, 3)
 
 	y:= x
-	
-	x = append(x, 4) //age 4 number index e x 4 boshaisilo, but pore jokhhon y aki index e value(5) boshailo then ager value the overwrite hoise    
+
+	x = append(x, 4) //age 4 number index e x 4 boshaisilo, but pore jokhhon y aki index e value(5) boshailo then ager value the overwrite hoise
 	y = append(y, 5)
-	
+
 
 	x[0] = 10
 	fmt.Println("x:", x)
@@ -183,19 +183,20 @@ func main(){
 //slice example
 
 func changeslice(a []int) []int {
-	a[0] = 10
+	a[0] = 10 //overwrite the value
 	a = append(a, 11)
 	return a
 }
-func main(){
-	x:=[]int{1,2,3,4,5}
+func main() {
+	x := []int{1, 2, 3, 4, 5}
 	x = append(x, 6)
-	x= append(x, 7)
+	x = append(x, 7)
 
 	a := x[4:]
-	
+
 	y := changeslice(a)
 
 	fmt.Println("x:", x)
 	fmt.Println("Y:", y)
 }
+
