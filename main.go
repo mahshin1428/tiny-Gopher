@@ -178,7 +178,7 @@ func main(){
 	fmt.Println("y:", y)
 }
 
-*/
+
 
 //slice example
 
@@ -200,3 +200,9 @@ func main() {
 	fmt.Println("Y:", y)
 }
 
+*/
+
+//defer function
+func first() {
+	defer fmt.Println("First function called") //defer function last e call hoi
+}
